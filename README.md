@@ -1,6 +1,6 @@
 
 # ***readme in progress***
-# MealMixer (meal-mixer)
+# meal-mixer (MealMixer)
 ## Intro: Diversify a weekly household menu
 
 - MealMixer is designed to help diversify a persons' diet by evaluating
