@@ -1,0 +1,52 @@
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+# debudgging snipit below: add to widget to see where it is on the canvas
+ # canvas.before:
+            #     Color:
+            #         rgba: [1,0,0,.6]
+            #     Rectangle:
+            #         pos: self.pos
+            #         size: self.size
+
+<StandardButton@Button>
+    font_size: 30
+
+<ScManager>:
+    orientation: 'vertical'
+    transition: FadeTransition()
+    HomeScreen:
+
+<HomeScreen>:
+    name: 'home_screen'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'MealMixer Home'
+            font_size: 50
+            size_hint: 1,.2
+        BoxLayout:
+            orientation:'horizontal'
+            BoxLayout:
+
+                canvas:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source:root.home_screen_background
+            BoxLayout:
+                orientation:'vertical'
+                StandardButton:
+                    text: 'Meals'
+                    # on_release: app.root.current = 'meals'
+                StandardButton:
+                    text: 'Weekly Menus'
+                    # on_release: app.root.current = 'weekly_menus'
+                StandardButton:
+                    text: 'Quit MealMixer'
+                    on_release: exit()
+
+                StandardButton:
+                    text: 'testkivyclass'
+                    # on_release:
+                    #app.root.current = 'testkivyclass'
+
+
