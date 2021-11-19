@@ -6,4 +6,4 @@
 '''
 
 from . import _logging
-from .import interface
+from . import interface

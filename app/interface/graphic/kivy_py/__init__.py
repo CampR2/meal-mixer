@@ -1,1 +1,1 @@
-# from . import new_meal_url
+from . import new_recipe_url

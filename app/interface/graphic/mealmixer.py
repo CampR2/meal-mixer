@@ -32,6 +32,7 @@ for kv_file in listdir(kv_path):
 izzy_smile = join(gi_path, "media", "home_screen_izzy_smile.jpg")
 potito_burrito = join(gi_path, "media", "meals_screen_potito_burrito.jpg")
 
+
 class HomeScreen(Screen):
     home_screen_background = StringProperty(izzy_smile)
     meals_screen_background = StringProperty(potito_burrito)

@@ -1,0 +1,44 @@
+
+# new recipe manipulation screen
+# Author: Robert Camp (CampR2)
+# Last Modified: 11/19/2021
+#
+<NewRecipe@Screen>
+    name: 'new_recipe'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'MealMixer Home'
+            font_size: 50
+            size_hint: 1,.2
+        BoxLayout:
+            orientation:'horizontal'
+            BoxLayout:
+                canvas:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source:root.manager.get_screen('home').home_screen_background
+            BoxLayout:
+                orientation:'vertical'
+                Button:
+                    text: 'New User Recipe (Manual)'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.current = 'recipes'
+                Button:
+                    text: 'New Web Recipe (URL)'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.current = 'new_recipe_url'
+                Button:
+                    text: 'Back to Recipes Screen'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.current = 'recipes'
+                Button:
+                    text: 'Back to Home Screen'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.current = 'home'
+

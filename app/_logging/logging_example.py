@@ -1,4 +1,7 @@
 '''
+    I used this to learn how logging worked in Python3. This was the template
+    for my implementation of logging in Meal-Mixer (CampR2)
+
     source: https://docs.python.org/3/howto/logging-cookbook.html#logging-cookbook
     Author: Vinay Sajip <vinay_sajip at red-dove dot com>
 
@@ -37,7 +40,7 @@ def listener_process(q, stop_event, config):
     This could be done in the main process, but is just done in a separate
     process for illustrative purposes.
 
-    This initialises logging according to the specified configuration,
+    This initializes logging according to the specified configuration,
     starts the listener and waits for the main process to signal completion
     via the event. The listener is then stopped, and the process exits.
     """

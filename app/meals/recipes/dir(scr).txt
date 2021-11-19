@@ -1,0 +1,9 @@
+ dir(scr)
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'author', 'canonical_url', 'category', 'cook_time', 'host', 'image', 'ingredients', 'instructions', 'language', 'links', 'nutrients', 'plugins_initialized', 'prep_time', 'ratings', 'reviews', 'schema', 'site_name', 'soup', 'title', 'total_time', 'url', 'wild_mode', 'yields']
+
+from recipe_scrapers import scrape_me
+scr = scrape_me('https://www.allrecipes.com/recipe/281995/classic-hearty-beef-stew/')
+from meals.recipes.scraper import Scraper
+sc = Scraper()
+
+https://www.allrecipes.com/recipe/281995/classic-hearty-beef-stew/

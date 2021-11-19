@@ -1,4 +1,6 @@
 #:import FadeTransition kivy.uix.screenmanager.FadeTransition
+# author: Robert Camp (CampR2)
+# last modified: 11/19/2021
 # debudgging snipit below: add to widget to see where it is on the canvas
  # canvas.before:
             #     Color:
@@ -7,16 +9,40 @@
             #         pos: self.pos
             #         size: self.size
 
+# this is an experiment with dynamic classes in Kivy
 <StandardButton@Button>
+    background_color: (0, 0, 0, 0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (48/255, 84/255, 255/255, 1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [58]
+    size_hint_y: 1
+    text_size: self.width, None
+    halign: 'center'
+    valign: 'middle'
+    height: self.texture_size[1]
     font_size: 30
+    size_hint_x: 1
+    opacity:1
+
+
 
 <ScManager>:
     orientation: 'vertical'
     transition: FadeTransition()
     HomeScreen:
+    Recipes:
+    Weekly_Menus:
+    NewRecipe:
+    NewRecipeURL:
+
 
 <HomeScreen>:
-    name: 'home_screen'
+    name: 'home'
     BoxLayout:
         orientation: 'vertical'
         Label:
@@ -26,7 +52,6 @@
         BoxLayout:
             orientation:'horizontal'
             BoxLayout:
-
                 canvas:
                     Rectangle:
                         pos: self.pos
@@ -35,15 +60,14 @@
             BoxLayout:
                 orientation:'vertical'
                 StandardButton:
-                    text: 'Meals'
-                    # on_release: app.root.current = 'meals'
+                    text: 'Recipes'
+                    on_release: app.root.current = 'recipes'
                 StandardButton:
                     text: 'Weekly Menus'
-                    # on_release: app.root.current = 'weekly_menus'
+                    on_release: app.root.current = 'weekly_menus'
                 StandardButton:
                     text: 'Quit MealMixer'
                     on_release: exit()
-
                 StandardButton:
                     text: 'testkivyclass'
                     # on_release:

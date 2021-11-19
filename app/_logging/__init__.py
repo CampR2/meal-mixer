@@ -21,9 +21,9 @@ dt1='1'
 # file names
 app_log = (f'meal_mixer_{dt1}.log')
 debug_log = (f'debug_{dt1}.log')
-# path to _logging
+# path to _logging package
 logging_path = abspath(dirname(__file__))
-# paths to files
+# paths to logging files
 app_log = join(logging_path + "/logs", app_log)
 debug_log = join(logging_path + "/logs", debug_log)
 
@@ -45,19 +45,12 @@ LOG_CONFIG = {
         'version': 1,
         'disable_existing_loggers': True,
         'formatters': {
-            'error': {
-                'class': 'logging.Formatter',
-                'format': ' *** \nTime: %(asctime)s\
-                                \nlogger: %(name)s\
-                                \nlog level: %(levelname)s\
-                                \nmessage: %(message)s'
-            },
             'detailed': {
                 'class': 'logging.Formatter',
                 'format': ' *** \nTime: %(asctime)s\
+                                \nlogger: %(name)s\
                                 \nlog level: %(levelname)s\
                                 \npath: %(pathname)s , line: %(lineno)s\
-                                \nlogger: %(name)s\
                                 \nmessage: %(message)s)'
             },
             'simple': {
@@ -69,7 +62,7 @@ LOG_CONFIG = {
             'console': {
                 'class': 'logging.StreamHandler',
                 'formatter': 'simple',
-                'level': 'INFO',
+                'level': 'WARNING',
                 'stream': 'ext://sys.stderr'
             },
             'file': {
@@ -77,7 +70,7 @@ LOG_CONFIG = {
                 'filename': app_log,
                 'mode': 'w',
                 'formatter': 'detailed',
-                'level': 'DEBUG'
+                'level': 'INFO'
             },
             'debug_file': {
                 'class': 'logging.FileHandler',
@@ -90,12 +83,12 @@ LOG_CONFIG = {
         'loggers': {
             'console': {
                 'handlers': ['console'],
-                'level': 'DEBUG',
+                'level': 'WARNING',
                 'propagate': False
             },
             'console_log': {
                 'handlers': ['file', 'console'],
-                'level': 'INFO',
+                'level': 'WARNING',
                 'propagate': False
             },
             'debug': {

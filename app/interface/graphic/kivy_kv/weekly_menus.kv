@@ -1,0 +1,42 @@
+# root menu manipulation screen
+# Author: Robert Camp (CampR2)
+# Last Modified: 11/19/2021
+
+<Weekly_Menus@Screen>
+    name: 'weekly_menus'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'MealMixer Home'
+            font_size: 50
+            size_hint: 1,.2
+        BoxLayout:
+            orientation:'horizontal'
+            BoxLayout:
+                canvas:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source:root.manager.get_screen('home').home_screen_background
+            BoxLayout:
+                orientation:'vertical'
+                Button:
+                    text: 'blank'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.current = 'meals'
+                Button:
+                    text: 'blank'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.new_color_screen()
+                Button:
+                    text: 'blank'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.new_color_screen()
+                Button:
+                    text: 'blank'
+                    font_size: 30
+                    opacity: 1
+                    on_release: app.root.new_color_screen()
