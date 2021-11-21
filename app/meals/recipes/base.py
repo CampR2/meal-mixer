@@ -1,37 +1,40 @@
-''' base recipe object that all other recipe objects will inherit from
+''' base meal-mixer object
 
-
+    author: Robert Camp (CampR2)
+    last modified: 11/19/2021
 
 '''
-from app.tools import _util as _util
+from app.tools._util import Util as Util
 import uuid
 import copy
 
-
 class Base():
-    ''' the base object of most other recipe and meal objects in MealMixer'''
+    ''' the base object of most other recipe and meal objects in MealMixer
+
+        - self._name: starts as [(Util().utc_dt(), 'base')] as a way of recording
+        the objects creation datetime.
+        - self._object_history: a place to record past versions of objects
+        when they change (prototype mode)
+        self._uuid: a unique identifier in case there are recipes with the same
+        name that get added to the mixer
+        - self._usage_log: place to record datetimes of when the object is used
+        - self._notes = user notes about the object
+        - self._star_rating: star rating 1...5 initilized as int() which defaults
+        to zero when no argument is added
+        - self._average_star_rating: the average of all star ratings for this
+        object
+        - self._star_rating_history: a place to store a running star_history so
+        that it may be averaged
+        - self._taste_and_service_ratings: more detailed ratings about the object
+        - self._reviews: user reviews about the object
+        - self._frequency: the frequency at which the user wishes a recipe
+        to be incorporated in the meal-mixer menus
+
+
+    '''
 
     def __init__(self):
-        '''
-            - self._name: starts as [(_util.utc_dt(), 'base')] as a way of recording
-            the objects creation datetime.
-            - self._object_history: a place to record past versions of objects
-            when they change (prototype mode)
-            self._uuid: a unique identifier in case there are recipes with the same
-            name that get added to the mixer
-            - self._usage_log: place to record datetimes of when the object is used
-            - self._notes = user notes about the object
-            - self._star_rating: star rating 1...5 initilized as int() which defaults
-            to zero when no argument is added
-            - self._average_star_rating: the average of all star ratings for this
-            object
-            - self._star_rating_history: a place to store a running star_history so
-            that it may be averaged
-            - self._taste_and_service_ratings: more detailed ratings about the object
-            - self._reviews: user reviews about the object
-
-        '''
-        self._name = {_util.tz_dt('UTC'): 'base'}
+        self._name = {Util().tz_dt('UTC'): 'base'}
         self._object_history = {}
         self._uuid = uuid.uuid4()
         self._usage_log = {}
@@ -56,7 +59,7 @@ class Base():
     def name(self, value):
         # security measure: lenth of the name must be >2, but <75
         if len(value) > 2 and len(value) < 75:
-            self._name[_util.tz_dt()] = value
+            self._name[Util().tz_dt()] = value
         else:
             print('Choose a name that is 3...75 characters long.')
 
@@ -74,7 +77,7 @@ class Base():
         try:
             value = int(value)
             if value > 0 and value < 6:
-                self._star_rating_history.append((_util.tz_dt(), value))
+                self._star_rating_history.append((Util().tz_dt(), value))
                 self._star_rating = value
                 self.star_rating_average()
                 print(f"The star_rating is: {value}")
@@ -115,7 +118,7 @@ class Base():
 
     @taste_and_service_ratings.setter
     def taste_and_service_ratings(self, rating_dict):
-        self._taste_and_service_ratings[_util.tz_dt()] = rating_dict
+        self._taste_and_service_ratings[Util().tz_dt()] = rating_dict
 
     @property
     def notes(self):
@@ -124,7 +127,7 @@ class Base():
 
     @notes.setter
     def notes(self, note):
-        self._note.append[_util.tz_dt] = note
+        self._note.append[Util().tz_dt] = note
 
     @property
     def usage_log(self):
@@ -133,7 +136,7 @@ class Base():
 
     @usage_log.setter
     def usage_log(self, value):
-        self._usage_log.append[_util.tz_dt()] = value
+        self._usage_log.append[Util().tz_dt()] = value
 
     @property
     def object_history(self):
@@ -141,16 +144,16 @@ class Base():
         return self._object_history
 
     def set_object_history(self):
-        self._object_history[_util.tz_dt()] = copy.deepcopy(self)
+        self._object_history[Util().tz_dt()] = copy.deepcopy(self)
 
     @property
     def reviews(self):
-        ''' return the reviews of the object'''
+        ''' return object's reviews'''
         return self._reviews
 
     @reviews.setter
     def reviews(self, review):
-        self.reviews[_util.tz_dt()] = review
+        self.reviews[Util().tz_dt()] = review
 
 
 if __name__ == '__main__':

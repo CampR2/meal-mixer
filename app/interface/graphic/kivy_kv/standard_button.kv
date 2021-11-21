@@ -1,0 +1,26 @@
+# this is an experiment with dynamic classes in Kivy
+# this provides a more interesting button than the standard Kivy Button
+# the only real issue I am currently seeing is that it does not highlight
+# when I press on the button, but the functionality seems to be there.
+# author: Robert Camp (CampR2)
+# last modified: 11/20/2021
+<StandardButton@Button>
+    id: standard_button
+    background_color: (0, 0, 0, 0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (50/255, 0/255, 255/255, 1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [58]
+    size_hint_y: 1
+    text_size: self.width, None
+    halign: 'center'
+    valign: 'middle'
+    height: self.texture_size[1]
+    font_size: 30
+    size_hint_x: 1
+    opacity:1
+

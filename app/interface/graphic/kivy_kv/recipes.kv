@@ -7,7 +7,7 @@
     BoxLayout:
         orientation: 'vertical'
         Label:
-            text: 'MealMixer Home'
+            text: 'Recipes'
             font_size: 50
             size_hint: 1,.2
         BoxLayout:
@@ -20,23 +20,25 @@
                         source:root.manager.get_screen('home').meals_screen_background
             BoxLayout:
                 orientation:'vertical'
-                Button:
+                StandardButton:
                     text: 'New Recipe'
                     font_size: 30
                     opacity: 1
                     on_release: app.root.current = 'new_recipe'
-                Button:
-                    text: 'Edit Recipe'
+                # add this button to the Search Recipes screen as an option
+                # once a recipe has been located
+                # Button:
+                #     text: 'Edit Recipe'
+                #     font_size: 30
+                #     opacity: 1
+                #     # on_release:
+                StandardButton:
+                    text: 'Search Recipes'
                     font_size: 30
                     opacity: 1
                     # on_release:
-                Button:
-                    text: 'Search Recipe'
-                    font_size: 30
-                    opacity: 1
-                    # on_release:
-                Button:
-                    text: 'Exit to Home Menu'
+                StandardButton:
+                    text: 'Exit to Home'
                     font_size: 30
                     opacity: 1
                     on_release: app.root.current = 'home'

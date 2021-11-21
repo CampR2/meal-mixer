@@ -21,22 +21,22 @@
                         source:root.manager.get_screen('home').home_screen_background
             BoxLayout:
                 orientation:'vertical'
-                Button:
-                    text: 'New User Recipe (Manual)'
+                StandardButton:
+                    text: 'New User Recipe (Manual) <nonfunctional/in-process>'
                     font_size: 30
                     opacity: 1
-                    on_release: app.root.current = 'recipes'
-                Button:
+                    # on_release: app.root.current = 'recipes'
+                StandardButton:
                     text: 'New Web Recipe (URL)'
                     font_size: 30
                     opacity: 1
                     on_release: app.root.current = 'new_recipe_url'
-                Button:
+                StandardButton:
                     text: 'Back to Recipes Screen'
                     font_size: 30
                     opacity: 1
                     on_release: app.root.current = 'recipes'
-                Button:
+                StandardButton:
                     text: 'Back to Home Screen'
                     font_size: 30
                     opacity: 1
