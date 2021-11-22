@@ -9,13 +9,15 @@ from ...meals import WM
 import sqlite3
 import pickle
 import logging
-
+from ...glob_vars import ROOT_APP
+from os.path import join
 class RecipeDBTools():
     """ save and retrieve a recipe """
     def __init__(self):
         super(RecipeDBTools, self).__init__()
         # path for universal locatin of the DB
-        self.db_string = 'C:\\Users\\rbcmp\\apps\\meal-mixer\\app\\db\\_db\\meal-mixer.db'
+        print(ROOT_APP)
+        self.db_string = join(ROOT_APP, 'db\\_db\\meal-mixer.db')
         # get universal logger
         self.log = logging.getLogger('')
         self.construct_db()
