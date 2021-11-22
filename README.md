@@ -22,7 +22,7 @@ realase
         - this branch is not guarenteed function correctly
         - pushes may be made while experimental features are still in progress
         - VOLATILE (potentially)
-# Installing and Running
+# Installing
 If the user is running this app directly from the source code, I sugggest they
 create a virtual enviornment with the command
 ```
@@ -32,11 +32,16 @@ python3 -m venv /path/to/new/virtual/environment
 Refer to (https://docs.python.org/3/library/venv.html?highlight=venv#module-venv)
 for more information.
 
-- After a virtual enviornment is created and ACTIVAED, Install MealMixer the desired
-python modules by executing the following from the command line inside the
-MealMixer/app folder
+- After a virtual enviornment is created and ACTIVAED, Install the desired
+python modules by executing the following instruction from the command line inside the
+MealMixer folder. There should be a requirements.txt file there.
 ```
-pip install --user -r requirements.txt
+python -m pip install -r .\requirements.txt
+```
+# Program Execution
+from one folder above the meal-mixer package execute the following command
+```
+pythom meal-mixer
 ```
 ## Author
 **Robert Camp (CampR2)**
