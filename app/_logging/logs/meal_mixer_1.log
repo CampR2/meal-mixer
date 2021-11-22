@@ -1,167 +1,167 @@
  *** 
-Time: 2021-11-21 23:38:08,490                                
+Time: 2021-11-21 23:40:59,598                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\logger.py , line: 224                                
-message: [Logger      ] Record log in C:\Users\rbcmp\.kivy\logs\kivy_21-11-21_39.txt)
+message: [Logger      ] Record log in C:\Users\rbcmp\.kivy\logs\kivy_21-11-21_40.txt)
  *** 
-Time: 2021-11-21 23:38:08,489                                
+Time: 2021-11-21 23:40:59,596                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py , line: 477                                
 message: [deps        ] Successfully imported "kivy_deps.angle" 0.3.0)
  *** 
-Time: 2021-11-21 23:38:08,490                                
+Time: 2021-11-21 23:40:59,598                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py , line: 477                                
 message: [deps        ] Successfully imported "kivy_deps.glew" 0.3.0)
  *** 
-Time: 2021-11-21 23:38:08,490                                
+Time: 2021-11-21 23:40:59,598                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py , line: 477                                
 message: [deps        ] Successfully imported "kivy_deps.sdl2" 0.3.1)
  *** 
-Time: 2021-11-21 23:38:08,490                                
+Time: 2021-11-21 23:40:59,598                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py , line: 480                                
 message: [Kivy        ] v2.0.0)
  *** 
-Time: 2021-11-21 23:38:08,491                                
+Time: 2021-11-21 23:40:59,598                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py , line: 484                                
 message: [Kivy        ] Installed at "C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py")
  *** 
-Time: 2021-11-21 23:38:08,491                                
+Time: 2021-11-21 23:40:59,598                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py , line: 485                                
 message: [Python      ] v3.9.9 (tags/v3.9.9:ccb0e6a, Nov 15 2021, 18:08:50) [MSC v.1929 64 bit (AMD64)])
  *** 
-Time: 2021-11-21 23:38:08,491                                
+Time: 2021-11-21 23:40:59,598                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\__init__.py , line: 486                                
 message: [Python      ] Interpreter at "C:\Users\rbcmp\venv\meal-mixer\Scripts\python.exe")
  *** 
-Time: 2021-11-21 23:38:08,514                                
+Time: 2021-11-21 23:40:59,623                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\factory.py , line: 185                                
 message: [Factory     ] 186 symbols loaded)
  *** 
-Time: 2021-11-21 23:38:08,583                                
+Time: 2021-11-21 23:40:59,694                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\__init__.py , line: 144                                
 message: [Image       ] Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored))
  *** 
-Time: 2021-11-21 23:38:08,607                                
+Time: 2021-11-21 23:40:59,720                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\__init__.py , line: 66                                
 message: [Window      ] Provider: sdl2)
  *** 
-Time: 2021-11-21 23:38:08,876                                
+Time: 2021-11-21 23:40:59,990                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 38                                
 message: [GL          ] Using the "OpenGL" graphics system)
  *** 
-Time: 2021-11-21 23:38:08,880                                
+Time: 2021-11-21 23:40:59,993                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 38                                
 message: [GL          ] GLEW initialization succeeded)
  *** 
-Time: 2021-11-21 23:38:08,880                                
+Time: 2021-11-21 23:40:59,993                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 44                                
 message: [GL          ] Backend used <glew>)
  *** 
-Time: 2021-11-21 23:38:08,880                                
+Time: 2021-11-21 23:40:59,993                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 48                                
 message: [GL          ] OpenGL version <b'4.6.0 NVIDIA 471.41'>)
  *** 
-Time: 2021-11-21 23:38:08,880                                
+Time: 2021-11-21 23:40:59,993                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 49                                
 message: [GL          ] OpenGL vendor <b'NVIDIA Corporation'>)
  *** 
-Time: 2021-11-21 23:38:08,880                                
+Time: 2021-11-21 23:40:59,993                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 50                                
 message: [GL          ] OpenGL renderer <b'NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2'>)
  *** 
-Time: 2021-11-21 23:38:08,880                                
+Time: 2021-11-21 23:40:59,993                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 54                                
 message: [GL          ] OpenGL parsed version: 4, 6)
  *** 
-Time: 2021-11-21 23:38:08,881                                
+Time: 2021-11-21 23:40:59,994                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 74                                
 message: [GL          ] Shading version <b'4.60 NVIDIA'>)
  *** 
-Time: 2021-11-21 23:38:08,881                                
+Time: 2021-11-21 23:40:59,994                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 76                                
 message: [GL          ] Texture max size <32768>)
  *** 
-Time: 2021-11-21 23:38:08,881                                
+Time: 2021-11-21 23:40:59,994                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\gl\__init__.py , line: 78                                
 message: [GL          ] Texture max units <32>)
  *** 
-Time: 2021-11-21 23:38:08,892                                
+Time: 2021-11-21 23:41:00,004                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\window\window_sdl2.py , line: 319                                
 message: [Window      ] auto add sdl2 input provider)
  *** 
-Time: 2021-11-21 23:38:08,893                                
+Time: 2021-11-21 23:41:00,005                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\window\__init__.py , line: 1890                                
 message: [Window      ] virtual keyboard not allowed, single mode, not docked)
  *** 
-Time: 2021-11-21 23:38:08,898                                
+Time: 2021-11-21 23:41:00,011                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\__init__.py , line: 66                                
 message: [Text        ] Provider: sdl2)
  *** 
-Time: 2021-11-21 23:38:08,914                                
+Time: 2021-11-21 23:41:00,029                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\image\__init__.py , line: 271                                
 message: [GL          ] NPOT texture support is available)
  *** 
-Time: 2021-11-21 23:38:08,917                                
+Time: 2021-11-21 23:41:00,032                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\core\image\__init__.py , line: 271                                
 message: [GL          ] Unpack subimage support is available)
  *** 
-Time: 2021-11-21 23:38:08,958                                
+Time: 2021-11-21 23:41:00,073                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\base.py , line: 528                                
 message: [Base        ] Start application main loop)
  *** 
-Time: 2021-11-21 23:38:31,020                                
+Time: 2021-11-21 23:41:03,908                                
 logger: kivy                                
 log level: INFO                                
 path: C:\Users\rbcmp\venv\meal-mixer\lib\site-packages\kivy\base.py , line: 624                                
