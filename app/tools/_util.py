@@ -1,3 +1,9 @@
+
+''' utilities module for meal-mixer
+    Author: Robert Camp (CampR2)
+    Last Modified: 11/19/2021
+
+'''
 from datetime import datetime
 from dateutil.tz import gettz
 import logging

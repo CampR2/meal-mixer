@@ -8,6 +8,7 @@
 # from .recipes.custom import Custom as CM
 
 from .recipes.web_meal import WebMeal as WM
+from .recipes.recipe_db_tools import RecipeDBTools as SR
 
 
 # BM()

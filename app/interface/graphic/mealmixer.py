@@ -3,7 +3,7 @@
     author: Robert Camp (campR2)
     last modified: 11/11/2021
 '''
-
+from .dbtest import SaveBlob
 from . import config
 import kivy
 
@@ -12,6 +12,7 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ListProperty
 from kivy.properties import StringProperty
+from kivy.properties import ObjectProperty
 from kivy.graphics.vertex_instructions import Rectangle
 from kivy.graphics.context_instructions import Color
 from os import listdir
@@ -34,6 +35,7 @@ potito_burrito = join(gi_path, "media", "meals_screen_potito_burrito.jpg")
 
 
 class HomeScreen(Screen):
+    test_mod = ObjectProperty(SaveBlob)
     home_screen_background = StringProperty(izzy_smile)
     meals_screen_background = StringProperty(potito_burrito)
     pass

@@ -30,7 +30,7 @@ def get_scrapers_object(url='', wild_mode=False):
 # def _get_recipe_restaurant_object():
 #     pass
 #
-def save_recipe():
+def recipe_db_tools():
     # print(f'current recursion limit: {sys.getrecursionlimit()}')
     # sys.setrecursionlimit(3000)
     # print(f'current recursion limit: {sys.getrecursionlimit()}')
@@ -57,7 +57,7 @@ def main():
     # scr = _get_recipe_scrapers_object('https://www.allrecipes.com/recipe/12720/grilled-salmon-i/', True)
     # print(scr._timestamp_created_when)
     # print(scr._timestamp_log_usage)
-    save_recipe()
+    recipe_db_tools()
 
 
 if __name__ == '__main__':

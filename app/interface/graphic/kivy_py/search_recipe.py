@@ -1,7 +1,7 @@
-''' capture user URL input to scrape a recipe from the web
+''' search for a recipe within the meal-mixer DB
 
     Author: Robert Camp (CampR2)
-    Last Modified: 11/19/2021
+    Last Modified: 11/21/2021
 
 '''
 
@@ -16,8 +16,8 @@ import logging
 from app import meals
 
 Builder.load_string('''
-<NewRecipeURL>:
-    name: 'new_recipe_url'
+<SearchRecipe>:
+    name: 'search_recipe'
     BoxLayout:
         id: box_1
         orientation: 'vertical'
@@ -43,13 +43,13 @@ Builder.load_string('''
                 orientation:'vertical'
                 StandardButton:
                     id: button_1
-                    text: 'Search Recipe'
+                    text: 'Edit Recipe <nonfunctional/in-process>'
                     font_size: 30
                     opacity: 1
-                    on_release: app.root.current = 'search_recipe'
+                    # on_release:
                 StandardButton:
                     id: button_2
-                    text: 'New User Recipe (Manual) <nonfunctional/in-process>'
+                    text: 'Delete Recipe <nonfunctional/in-process>'
                     font_size: 30
                     opacity: 1
                     # on_release:
@@ -68,7 +68,7 @@ Builder.load_string('''
                     on_release: app.root.current = 'home'
 
         TextInput:
-            id: text_in_url
+            id: text_in_name
             focus: True
             write_tab: False
             multiline: False
@@ -80,13 +80,13 @@ Builder.load_string('''
             width: self.width
             font_size: 30
             size_hint: 1, None
-            on_text_validate: root.get_url_recipe()
+            on_text_validate: root.recipe_search()
 
 
     ''')
 
-class NewRecipeURL(Screen):
-    """ provide functionality for NewRecipeURL window
+class SearchRecipe(Screen):
+    """ provide functionality for SearchRecipe window
 
         properties:
             - recipe: the recipe retrieved from the scraper.py module
@@ -94,29 +94,26 @@ class NewRecipeURL(Screen):
 
     """
     recipe = ObjectProperty(None)
-    start_text = StringProperty('Type the Web Address Here')
+    start_text = StringProperty('Type the Recipe Name Here')
 
     def __init__(self, **kwargs):
-        super(NewRecipeURL, self).__init__(**kwargs)
+        super(SearchRecipe, self).__init__(**kwargs)
         # get core logger
         self.log = logging.getLogger('root')
 
-    def get_url_recipe(self):
-        ''' capture the user's url input'''
+    def recipe_search(self):
+        ''' capture the user's recipe name input'''
 
-        url = self.ids['text_in_url'].text
-        ''' later functionality: this could be made to handle more than one
-          url pull at a time url can become urls below and it can be a list
-            of urls instead of a single one. I can then loop through the list
-            there will need to be a more flexible way to account for bad URLs
-            end
-        '''
-        self.log.info(f'{__name__}.id[\'text_in_url\'] info entered by user: {url}')
-        self.recipe = meals.WM(url) # the magic
-        # the name of the recipe being base indicated that only the "base"
-        # object was loaded and therefore an error has occured with the scrape
-        if self.recipe.name == 'base':
-            self.ids['text_in_url'].text = self.start_text
+        name = self.ids['text_in_name'].text
+
+        try:
+            self.recipe = meals.SR().get_recipe(name)
+            self.ids['label_1'].text = f'{self.recipe.name} retrieved successfully from \
+the meal-mixer.db'
+            self.ids['text_in_name'].text = ''
+            Clock.schedule_once(self.reset_text, 1)
+        except IndexError as e:
+            self.ids['text_in_name'].text = self.start_text
             label_1 = self.ids['label_1']
             # flash red screen
             self.cover_rect = Rectangle(size=label_1.size, pos=label_1.pos)
@@ -125,20 +122,13 @@ class NewRecipeURL(Screen):
             label_1.canvas.after.add(self.cover_rect)
             # provide user feedback
             self.ids['label_1'].text = 'There was something wrong with the \
-address you entered.\nPlease try again.'
+name you entered.\nPlease try again.'
             # schedule widget reset
             Clock.schedule_once(self.reset_text, 2)
-        else:
-            meals.SR().save_recipe(self.recipe)
-            meals.SR().get_recipe(self.recipe.name)
-            self.ids['label_1'].text = f'{self.recipe.name} imported successfully from \
-URL: {url}'
-            self.ids['text_in_url'].text = ''
-            Clock.schedule_once(self.reset_text, 1)
 
     def reset_text(self, dt):
-        ''' reset the text_in_url widget and remove the red flash if present'''
-        self.ids['text_in_url'].text = self.start_text
+        ''' reset the text_in_name widget and remove the red flash if present'''
+        self.ids['text_in_name'].text = self.start_text
         label_1 = self.ids['label_1']
         # this is not the most tidy way to do this
         # I will come back and change to something more fluid in the future

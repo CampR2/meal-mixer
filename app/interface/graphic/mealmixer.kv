@@ -1,4 +1,4 @@
-    #:import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
 # author: Robert Camp (CampR2)
 # last modified: 11/19/2021
 # debudgging snipit below: add to widget to see where it is on the canvas
@@ -16,6 +16,7 @@
     Weekly_Menus:
     NewRecipe:
     NewRecipeURL:
+    SearchRecipe:
 
 
 <HomeScreen>:
@@ -40,13 +41,14 @@
                     text: 'Recipes'
                     on_release: app.root.current = 'recipes'
                 StandardButton:
-                    text: 'Weekly Menus'
-                    on_release: app.root.current = 'weekly_menus'
+                    text: 'Weekly Menus <nonfunctional/in-process>'
+                    # on_release: app.root.current = 'weekly_menus'
                 StandardButton:
                     text: 'Quit MealMixer'
                     on_release: exit()
                 StandardButton:
                     text: 'testkivyclass'
-                    on_release: app.root.current = 'new_recipe_url'
+                    on_release: root.test_mod()
+                    # app.root.current = 'new_recipe_url'
 
 
