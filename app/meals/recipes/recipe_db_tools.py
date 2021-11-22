@@ -11,6 +11,7 @@ import pickle
 import logging
 from ...glob_vars import ROOT_APP
 from os.path import join
+
 class RecipeDBTools():
     """ save and retrieve a recipe """
     def __init__(self):
