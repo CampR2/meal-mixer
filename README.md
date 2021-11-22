@@ -36,12 +36,12 @@ for more information.
 python modules by executing the following instruction from the command line inside the
 MealMixer folder. There should be a requirements.txt file there.
 ```
-python -m pip install -r .\requirements.txt
+python3 -m pip install -r .\requirements.txt
 ```
 # Program Execution
 from one folder above the meal-mixer package execute the following command
 ```
-pythom meal-mixer
+python3 meal-mixer
 ```
 ## Author
 **Robert Camp (CampR2)**
