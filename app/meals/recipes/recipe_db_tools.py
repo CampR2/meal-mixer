@@ -17,7 +17,6 @@ class RecipeDBTools():
     def __init__(self):
         super(RecipeDBTools, self).__init__()
         # path for universal locatin of the DB
-        print(ROOT_APP)
         self.db_string = join(ROOT_APP, 'db\\_db\\meal-mixer.db')
         # get universal logger
         self.log = logging.getLogger('')
@@ -56,15 +55,28 @@ class RecipeDBTools():
         # future
         recipe_db = sqlite3.connect(self.db_string)
         cur = recipe_db.cursor()
-        meal = cur.execute('''SELECT * FROM recipes WHERE name = ?''', (recipe_name,))
-        bfetch = meal.fetchall()[0][2]
-        meal = pickle.loads(bfetch)
+        recipe = cur.execute('''SELECT * FROM recipes WHERE name = ?''', (recipe_name,))
+        bfetch = recipe.fetchall()[0][2]
+        recipe = pickle.loads(bfetch)
         recipe_db.close()
 
         # self.log.debug(ingstr.encode('utf-8'))
-        # self.log.debug('the meal name after unpickling from the meal-mixer.db file %s' % (meal.name))
+        # self.log.debug('the recipe name after unpickling from the meal-mixer.db file %s' % (meal.name))
 
-        return(meal)
+    def del_recipe(recipe_name):
+        ''' delete a recipe from the meal-mixer DB
+
+            input:
+                - recipe_name: <str> the name of a recipe to be deleted
+
+s        '''
+        recipe_db = sqlite3.connect(self.db_string)
+        cur = recipe_db.cursor()
+        recipe = cur.execute('''Delete * FROM recipes WHERE name = ?''', (recipe_name,))
+        recipe_db.commit()
+        recipe_db.close()
+
+
 
 
 

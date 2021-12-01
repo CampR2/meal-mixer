@@ -12,10 +12,8 @@ of a meals inclusivity set by the user.
 - Branch Notes
     - "stable" will hold the latest stable app release as it becomes availiable.
         - this branch should work out of the box once prototyping is complete
-    - "prototype" will hold the latest working but unstable prototype app
-realase
-    - STABLE
-        - "test" this branch will be an experimental working branch used for
+        - STABLE
+    - "test" this branch will be an experimental working branch used for
     testing and debugging before a stable release
         - UNSTABLE
     - "r&d" branch will hold the latest in development app (volitile)

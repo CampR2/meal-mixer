@@ -21,6 +21,23 @@ Builder.load_string('''
     BoxLayout:
         id: box_1
         orientation: 'vertical'
+        Label:
+            id: title_label
+            text: 'New URL Recipe'
+            halign: 'center'
+            valign: 'middle'
+            font_size: 30
+            text_size:self.width, None
+            # height: self.texture_size[1]
+            size: self.texture_size
+            size_hint: 1, .2
+
+            # canvas.before:
+            #     Color:
+            #         rgba: [0,0,0,1]
+            #     Rectangle:
+            #         size: self.size
+            #         pos: self.pos
         BoxLayout:
             id: box_2
             orientation:'horizontal'
@@ -33,7 +50,7 @@ Builder.load_string('''
                 font_size: 30
                 canvas.before:
                     Color:
-                        rgba: [0,0,0,1]
+                        rgba: [.4, .4, .5, 1]
                     Rectangle:
                         pos: self.pos
                         size: self.size
