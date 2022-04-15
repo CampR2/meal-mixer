@@ -137,4 +137,4 @@ dmypy.json
 %SystemDrive%/
 
 # logging files
-app/_logging
+./app/_logging
