@@ -114,6 +114,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+meal-mixer-r-d/
 
 # Spyder project settings
 .spyderproject
@@ -137,5 +138,7 @@ dmypy.json
 %SystemDrive%/
 
 # logging files
-app/_logging/*
 *.log
+app/_logging/logs/
+.log
+.vscode/
