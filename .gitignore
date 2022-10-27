@@ -139,6 +139,6 @@ dmypy.json
 
 # logging files
 *.log
-.app/_logging/logs/
 .log
 .vscode/
+app/_logging/logs/*
