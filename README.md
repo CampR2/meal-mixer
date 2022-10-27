@@ -11,16 +11,13 @@ of a meals inclusivity set by the user.
 # Repository Notes
 - Branch Notes
     - "stable" will hold the latest stable app release as it becomes availiable.
-        - this branch should work out of the box once prototyping is complete
-        - STABLE
-    - "test" this branch will be an experimental working branch used for
-    testing and debugging before a stable release
-        - UNSTABLE
+        - should work out of the box once testing is complete
+    - "test" will hold the in-testing realase of
+        - an experimental working branch used for testing and debugging before a stable release
     - "r&d" branch will hold the latest in development app (volitile)
-        - this branch is not guarenteed function correctly
-        - pushes may be made while experimental features are still in progress
-        - VOLATILE (potentially)
-# Installing
+        - this branch MAY NOT FUNCTION CORRECTLY
+        - pushes may be made while experimental features are still in progresS
+# Installing and Running
 If the user is running this app directly from the source code, I sugggest they
 create a virtual enviornment with the command
 ```
